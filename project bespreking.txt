@@ -1,0 +1,21 @@
+Project:
+Framework: Laravel
+CSS Framework: Materialize
+Design: Responsive theme.
+Eerste epic: Student kan inloggen in de app en heeft een overzicht van zijn opleiding, jaren in zijn opleiding, verschillende blokken. 
+Per blok een overzicht van de studiepunten die hij kan halen en heeft behaald.
+Repo: Git
+Backlog: Trello
+
+Handy links:
+Theme: https://getmdl.io/templates/dashboard/index.html
+Uitleg over materialize in laravel: https://www.reddit.com/r/laravel/comments/6bnw55/using_materialize_css/
+
+
+Hiërarchie:
+Student
+Opleiding
+Klas
+Jaar
+Blok
+Studiepunten
