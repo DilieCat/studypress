@@ -12,6 +12,8 @@ Theme: https://getmdl.io/templates/dashboard/index.html
 Uitleg over materialize in laravel: https://www.reddit.com/r/laravel/comments/6bnw55/using_materialize_css/
 
 
+
+
 Hiërarchie:
 Student
 Opleiding
@@ -19,3 +21,9 @@ Klas
 Jaar
 Blok
 Studiepunten
+
+FEATURE: BREADCRUMP
+
+Note:
+Technische zaken goed beschrijven.
+Voor het groepje/heze
