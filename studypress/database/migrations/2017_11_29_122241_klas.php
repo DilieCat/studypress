@@ -13,7 +13,9 @@ class Klas extends Migration
      */
     public function up()
     {
-        //
+        $table->increments('id');
+            $table->string('name');
+            $table->integer('opleiding_id');
     }
 
     /**
@@ -23,6 +25,6 @@ class Klas extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('klas');
     }
 }
