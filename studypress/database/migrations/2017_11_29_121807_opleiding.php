@@ -14,7 +14,7 @@ class Opleiding extends Migration
     public function up()
     {
         Schema::create('opleiding', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('id')->index();
             $table->string('name');
             $table->integer('crebo');
             $table->integer('niveau');
