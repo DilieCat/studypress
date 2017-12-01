@@ -124,7 +124,7 @@
           <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">shopping_cart</i>Purchases</a>
           <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">people</i>Social</a>
           <div class="mdl-layout-spacer"></div>
-          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">help_outline</i><span class="visuallyhidden">Help</span></a>
+          <a class="mdl-navigation__link" href="{{ url('/logout') }}"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">exit_to_app</i><span class="white-text">Uitloggen</span></a>
         </nav>
       </div>
       <main class="mdl-layout__content mdl-color--grey-100">
