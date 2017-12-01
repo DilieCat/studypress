@@ -13,10 +13,7 @@ class Klas extends Migration
      */
     public function up()
     {
-        Schema::create('klas', function (Blueprint $table) {    
-            $table->increments('id')->index();
-            $table->string('name');
-            $table->integer('opleiding_id');
+        //
     }
 
     /**
@@ -26,6 +23,6 @@ class Klas extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('klas');
+        //
     }
 }
