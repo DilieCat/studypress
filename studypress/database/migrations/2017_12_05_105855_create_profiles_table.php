@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Klas extends Migration
+class CreateProfilesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,9 @@ class Klas extends Migration
      */
     public function up()
     {
-        Schema::create('klas', function (Blueprint $table) {    
-            $table->increments('id')->index();
-            $table->string('name');
-            $table->integer('opleiding_id');
+        Schema::create('profiles', function (Blueprint $table) {
+            $table->increments('id');
+            $table->timestamps();
         });
     }
 
@@ -27,6 +26,6 @@ class Klas extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('klas');
+        Schema::dropIfExists('profiles');
     }
 }
