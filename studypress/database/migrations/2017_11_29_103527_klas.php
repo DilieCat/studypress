@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Opleiding extends Migration
+class Klas extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,7 @@ class Opleiding extends Migration
      */
     public function up()
     {
-        Schema::create('opleiding', function (Blueprint $table) {
-            $table->increments('id')->index();
-            $table->string('name');
-            $table->integer('crebo');
-            $table->integer('niveau');
-        });
+        //
     }
 
     /**
@@ -28,6 +23,6 @@ class Opleiding extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('opleiding');
+        //
     }
 }
