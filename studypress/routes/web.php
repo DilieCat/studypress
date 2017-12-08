@@ -24,6 +24,7 @@ Route::group(['middleware' => 'auth'], function () {
 	//This protects the application for not logged in users
 
 	Route::get('/', 'HomeController@index');
+	Route::get('/profile', 'ProfileController@index');
 
     
 

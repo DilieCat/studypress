@@ -72,7 +72,6 @@
     </style>
   </head>
   <body>
-    @
     <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
       <header class="demo-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">
         <div class="mdl-layout__header-row">
@@ -108,7 +107,7 @@
               <span class="visuallyhidden">Accounts</span>
             </button>
             <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="accbtn">
-              <a href="{{ url("/profile/{$user_id}") }}"><li class="mdl-menu__item">Profiel</li></a>
+              <a href="{{ url('/profile') }}"><li class="mdl-menu__item">Profiel</li></a>
               <a href="{{ url('/logout') }}"><li class="mdl-menu__item">Uitloggen</li></a>
             </ul>
           </div>

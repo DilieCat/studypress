@@ -22,12 +22,9 @@ class CreateUsersTable extends Migration
             $table->string('adres');
             $table->string('woonplaats');
             $table->integer('ov_nummer');
-            $table->integer('cohort');
+            $table->string('cohort');
             $table->integer('klas_id');
             $table->integer('opleiding_id');
-            $table->timestamps('created_at');
-            $table->timestamps('updated_at');
-            $table->timestamps();
         });
     }
 

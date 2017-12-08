@@ -2,7 +2,6 @@
 
 @section('title', 'Homepagina')
 
-
 @section('content')
-    <p>{{ Auth::user()->name }}</p>
+    <p>{{ Auth::id() }}</p>
 @endsection
