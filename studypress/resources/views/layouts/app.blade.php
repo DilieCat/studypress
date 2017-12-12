@@ -148,8 +148,9 @@
         <div class="mdl-grid demo-content">
           <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
 {{-- Here does the content gets its place --}}            
+<div class='profile'>
 @yield('content')
-            
+</div>
           </div>
             </div>
           </div>
