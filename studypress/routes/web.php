@@ -17,9 +17,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-<<<<<<< HEAD
 Route::get('/home', 'HomeController@index')->name('home');
-=======
 
 
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
@@ -36,4 +34,3 @@ Route::group(['middleware' => 'auth'], function () {
 });
 
 // All my routes that need no authentication
->>>>>>> 949295d1f45d6a8f4cc45ddf59077c212aebffd7

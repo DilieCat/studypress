@@ -1,5 +1,4 @@
 <!doctype html>
-<!--
   Material Design Lite
   Copyright 2015 Google Inc. All rights reserved.
 
@@ -7,11 +6,8 @@
   you may not use this file except in compliance with the License.
   You may obtain a copy of the License at
 
-<<<<<<< HEAD
       https://www.apache.org/licenses/LICENSE-2.0
 
-=======
->>>>>>> ba4e8a5e481fd1d3467b8e5ea1fef3d0c02b4935
 @section('content')
     <p>Lorizzle shiz dolor shiznit amizzle, consectetizzle adipiscing yo mamma. Dope mammasay mammasa mamma oo sa velizzle, izzle volutpizzle, suscipizzle quis, gravida vizzle, fo shizzle my nizzle. Pellentesque yippiyo tortor. Own yo' erizzle. Fusce break yo neck, yall dolor gangster turpizzle tempizzle da bomb. Mauris check it out things crazy turpizzle. Dawg in tortizzle. Fizzle check it out rhoncizzle gangsta. In that's the shizzle yo platea dictumst. Da bomb dapibus. Dope tellus yo, pretizzle go to hizzle, mattizzle izzle, brizzle vitae, hizzle. Crunk suscipizzle. Rizzle sempizzle nizzle sizzle rizzle.
 

@@ -27,13 +27,11 @@
                         <span class="icon-bar"></span>
                     </button>
 
-<<<<<<< HEAD
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
                         {{ config('app.name', 'Laravel') }}
                     </a>
                 </div>
-=======
     <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
     <!--
     <link rel="canonical" href="http://www.example.com/">
@@ -42,8 +40,7 @@
     <link  rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/material.min.css') }}" rel="stylesheet">
->>>>>>> ba4e8a5e481fd1d3467b8e5ea1fef3d0c02b4935
+    <link href="{{ asset('css/material.min.css') }}" rel="stylesheet">  
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
