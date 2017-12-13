@@ -115,31 +115,17 @@
         </header>
         <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
           <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Home</a>
-          <a class="dropdown-button btn" href="#!" data-activates="dropdown2">Opleiding
+          <a class="dropdown-button btn" data-beloworigin="true" href="#!" data-activates="dropdown1">Opleiding
             <i class="material-icons right">arrow_drop_down</i>
             </a>
-            <ul id="dropdown2" class="dropdown-content">
-              <li><a href="#">Opleiding</a></li>
-              <li><a href="#">Klas</a></li>
+            <ul id="dropdown1" class="dropdown-content">
+              <li><a href="#">Applicatieontwikkeling</a></li>
+              <li><a href="#">LPICO15A1</a></li>
               <li><a href="#">Jaar</a></li>
               <li><a href="#">Blok</a></li>
               <li><a href="#">Studiepunten</a></li>
             </ul>
-            <script>
-              $('.dropdown-button').dropdown({
-                inDuration: 300,
-                outDuration: 225,
-                constrainWidth: false, // Does not change width of dropdown to that of the activator
-                hover: true, // Activate on hover
-                gutter: 0, // Spacing from edge
-                belowOrigin: false, // Displays dropdown below the button
-                alignment: 'left', // Displays dropdown with edge aligned to the left of button
-                stopPropagation: false // Stops event propagation
-              }
-            );
-              $('.dropdown-button').dropdown('open');
-              $('.dropdown-button').dropdown('close');
-            </script>
+
           <div class="mdl-layout-spacer"></div>
           <a class="mdl-navigation__link" href="{{ url('/logout') }}"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">exit_to_app</i><span class="white-text">Uitloggen</span></a>
         </nav>
@@ -203,6 +189,21 @@
           </g>
         </defs>
       </svg>
-    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+      <script src="{{ asset('materialize-css/js/materialize.min.js') }}"></script>
+      <script>
+          $('.dropdown-button').dropdown({
+            inDuration: 300,
+            outDuration: 225,
+            constrainWidth: false, // Does not change width of dropdown to that of the activator
+            hover: false, // Activate on hover
+            gutter: 0, // Spacing from edge
+            belowOrigin: false, // Displays dropdown below the button
+            alignment: 'left', // Displays dropdown with edge aligned to the left of button
+            stopPropagation: false // Stops event propagation
+          }
+        );
+      </script>
   </body>
 </html>
