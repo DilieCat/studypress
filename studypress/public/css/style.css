@@ -181,3 +181,12 @@ _:-ms-input-placeholder, :root .demo-graph {
 .white-text {
   color: #FFFFFF !important;
 }
+
+.profile{
+  padding: 10px;
+}
+
+.ov-nummer{
+  position: absolute;
+  right: 20%;
+}
