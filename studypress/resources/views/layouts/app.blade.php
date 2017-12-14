@@ -119,8 +119,8 @@
             <i class="material-icons right">arrow_drop_down</i>
             </a>
             <ul id="dropdown1" class="dropdown-content">
-              <li><a href="#">Applicatieontwikkeling</a></li>
-              <li><a href="#">LPICO15A1</a></li>
+              <li><a href="#">{{ $opleiding[0]->name }}</a></li>
+              <li><a href="#">{{ $klas[0]->name }}</a></li>
               <li><a href="#">Jaar</a></li>
               <li><a href="#">Blok</a></li>
               <li><a href="#">Studiepunten</a></li>

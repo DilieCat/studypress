@@ -7,6 +7,7 @@
 	<h3 class="dilie-cat">Student Gegevens</h3>
 Naam: {{ Auth::user()->name }} <br>
 Email: {{ Auth::user()->email }} <br>
-Woonplaats: {{ Auth::user()->woonplaats }}
+Woonplaats: {{ Auth::user()->woonplaats }} <br>
+{{ $opleiding[0]->name }}
 </div>
 @endsection 
