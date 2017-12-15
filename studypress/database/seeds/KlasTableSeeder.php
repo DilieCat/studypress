@@ -11,24 +11,27 @@ class KlasTableSeeder extends Seeder
      */
     public function run()
     {
-            DB::table('klas')->insert([ 
-            'name' => str_random(10), 
-            'opleiding_id' => random_int(1, 200), 
+               DB::table('klas')->insert([
+            'name' => str_random(10),
+            'opleiding_id' => random_int(1, 200),
         ]);
 
-            DB::table('klas')->insert([ 
-            'name' => str_random(10), 
-            'opleiding_id' => random_int(1, 200), 
+
+               DB::table('klas')->insert([
+            'name' => str_random(10),
+            'opleiding_id' => random_int(1, 200),
         ]);
 
-            DB::table('klas')->insert([ 
-            'name' => str_random(10), 
-            'opleiding_id' => random_int(1, 200), 
+
+               DB::table('klas')->insert([
+            'name' => str_random(10),
+            'opleiding_id' => random_int(1, 200),
         ]);
 
-            DB::table('klas')->insert([ 
-            'name' => str_random(10), 
-            'opleiding_id' => random_int(1, 200), 
+
+               DB::table('klas')->insert([
+            'name' => str_random(10),
+            'opleiding_id' => random_int(1, 200),
         ]);
     }
 }

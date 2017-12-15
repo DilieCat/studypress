@@ -11,28 +11,35 @@ class OpleidingTableSeeder extends Seeder
      */
     public function run()
     {
-            DB::table('opleiding')->insert([ 
-            'name' => str_random(10), 
-            'crebo' => random_int(1, 200), 
+               DB::table('opleiding')->insert([
+            'name' => str_random(10),
+            'crebo' => random_int(1, 200),
             'niveau' => random_int(1, 4),
+
         ]);
 
-            DB::table('opleiding')->insert([ 
-            'name' => str_random(10), 
-            'crebo' => random_int(1, 200), 
+
+               DB::table('opleiding')->insert([
+            'name' => str_random(10),
+            'crebo' => random_int(1, 200),
             'niveau' => random_int(1, 4),
+
         ]);
 
-            DB::table('opleiding')->insert([ 
-            'name' => str_random(10), 
-            'crebo' => random_int(1, 200), 
+
+               DB::table('opleiding')->insert([
+            'name' => str_random(10),
+            'crebo' => random_int(1, 200),
             'niveau' => random_int(1, 4),
+
         ]);
 
-            DB::table('opleiding')->insert([ 
-            'name' => str_random(10), 
-            'crebo' => random_int(1, 200), 
+
+               DB::table('opleiding')->insert([
+            'name' => str_random(10),
+            'crebo' => random_int(1, 200),
             'niveau' => random_int(1, 4),
+
         ]);
     }
 }
