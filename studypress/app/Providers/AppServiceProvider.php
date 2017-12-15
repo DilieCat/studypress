@@ -24,6 +24,7 @@ class AppServiceProvider extends ServiceProvider
         Schema::defaultStringLength(191);
 
         //We look in the user table for the opleiding_id in the user table to compare it to the ID in the opleiding table.
+        if(Auth::check()){
         $opleiding_id = Auth::user()->opleiding_id;
         $opleiding = DB::select('select * from opleiding where id = ' . $opleiding_id);
 
@@ -32,6 +33,9 @@ class AppServiceProvider extends ServiceProvider
         
         View::share('opleiding', $opleiding);
         View::share('klas', $klas);
+    }
+
+
     });
 }
 
