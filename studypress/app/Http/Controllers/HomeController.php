@@ -23,6 +23,5 @@ class HomeController extends Controller
         $user_id = Auth::user()->id;
 
         return view('welcome', ["user_id"=>$user_id]);
-        return view('home');
     }
 }
