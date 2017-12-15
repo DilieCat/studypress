@@ -11,13 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
 
 
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
@@ -28,6 +25,12 @@ Route::group(['middleware' => 'auth'], function () {
 
 	Route::get('/', 'HomeController@index');
 	Route::get('/profile', 'ProfileController@index');
+	Route::get('/block', 'BlockController@index');
+	Route::get('/block1', 'BlockController@getBlock1');
+	Route::get('/block2', 'BlockController@getBlock2');
+	Route::get('/block3', 'BlockController@getBlock3');
+	Route::get('/block4', 'BlockController@getBlock4');
+
 
     
 
