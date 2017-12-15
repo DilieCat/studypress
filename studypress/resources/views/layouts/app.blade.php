@@ -122,7 +122,7 @@
               <li><a href="#">{{ $opleiding[0]->name }}</a></li>
               <li><a href="#">{{ $klas[0]->name }}</a></li>
               <li><a href="#">Jaar</a></li>
-              <li><a href="#">Blok</a></li>
+              <li><a href="{{ url('/block') }}">Blok</a></li>
               <li><a href="#">Studiepunten</a></li>
             </ul>
 
@@ -134,8 +134,9 @@
         <div class="mdl-grid demo-content">
           <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
 {{-- Here does the content gets its place --}}            
+<div class='profile'>
 @yield('content')
-            
+</div>
           </div>
             </div>
           </div>
