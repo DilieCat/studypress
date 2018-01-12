@@ -110,7 +110,7 @@
               <li><a href="{{ url('/block') }}">Blok</a></li>
               <li><a href="#">Studiepunten</a></li>
             </ul>
-
+         
           <div class="mdl-layout-spacer"></div>
           <a class="mdl-navigation__link" href="{{ url('/logout') }}"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">exit_to_app</i><span class="white-text">Uitloggen</span></a>
         </nav>

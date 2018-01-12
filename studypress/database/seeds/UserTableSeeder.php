@@ -12,13 +12,13 @@ class UserTableSeeder extends Seeder
  public function run()
     {
         DB::table('users')->insert([
-            'name' => str_random(10),
-            'email' => str_random(10).'@gmail.com',
+            'name' => 'Henk',
+            'email' => 'henk@gmail.com',
             'password' => bcrypt('secret'),
-            'adres' => str_random(5) . 'erf',
-            'woonplaats' => str_random(5).'drecht',
+            'adres' => 'Straat-erf',
+            'woonplaats' => 'Dordrecht',
             'ov_nummer' => random_int(1, 50),
-            'telnummer' => '1234' . random_int(10000000, 99999999), 
+            'telnummer' => '06' . random_int(10000000, 99999999), 
             'cohort' => str_random(5),
             'klas_id' => random_int(1, 5),
             'opleiding_id' => random_int(1, 5),
@@ -26,11 +26,11 @@ class UserTableSeeder extends Seeder
         ]);
 
         DB::table('users')->insert([
-            'name' => str_random(10),
-            'email' => str_random(10).'@gmail.com',
+            'name' => 'Freek',
+            'email' => 'freek@gmail.com',
             'password' => bcrypt('secret'),
-            'adres' => str_random(5) . 'erf',
-            'woonplaats' => str_random(5).'drecht',
+            'adres' => 'Brand-erf',
+            'woonplaats' => 'Rotterdam',
             'ov_nummer' => random_int(1, 50),
             'telnummer' => '06'.random_int(10000000, 99999999), 
             'cohort' => str_random(5),
@@ -40,11 +40,11 @@ class UserTableSeeder extends Seeder
         ]);
 
         DB::table('users')->insert([
-            'name' => str_random(10),
-            'email' => str_random(10).'@gmail.com',
+            'name' => 'Kees',
+            'email' => 'kees@gmail.com',
             'password' => bcrypt('secret'),
-            'adres' => str_random(5) . 'erf',
-            'woonplaats' => str_random(5).'drecht',
+            'adres' => 'Kasia-erf',
+            'woonplaats' => 'Papendrecht',
             'ov_nummer' => random_int(1, 50),
             'telnummer' => '06'.random_int(10000000, 99999999), 
             'cohort' => str_random(5),
