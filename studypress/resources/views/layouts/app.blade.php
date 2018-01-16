@@ -100,11 +100,10 @@
         </header>
         <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
           <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Home</a>
-          <a class="dropdown-button btn" data-beloworigin="true" href="#!" data-activates="dropdown1">Opleiding
+          <a class="dropdown-button btn" data-beloworigin="true" href="#!" data-activates="dropdown1">{{ $opleiding[0]->name }}
             <i class="material-icons right">arrow_drop_down</i>
             </a>
             <ul id="dropdown1" class="dropdown-content">
-              <li><a href="#">{{ $opleiding[0]->name }}</a></li>
               <li><a href="#">{{ $klas[0]->name }}</a></li>
               <li><a href="#">Jaar</a></li>
               <li><a href="{{ url('/block') }}">Blok</a></li>
