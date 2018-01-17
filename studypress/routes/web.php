@@ -36,4 +36,3 @@ Route::group(['middleware' => 'auth'], function () {
 
 });
 
-// All my routes that need no authentication
