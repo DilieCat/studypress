@@ -22,7 +22,7 @@ Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 Route::group(['middleware' => 'auth'], function () {
 	//This is the place where (almost) every route needs to be place
 	//This protects the application for not logged in users
-	Route::post('/profile/edit', 'ProfileController@edit');
+
 	Route::get('/', 'HomeController@index');
 	Route::get('/profile', 'ProfileController@index');
 	Route::get('/block', 'BlockController@index');

@@ -30,12 +30,18 @@ class AppServiceProvider extends ServiceProvider
 
         $klas_id = Auth::user()->klas_id;
         $klas = DB::select('select * from klas where id = ' . $klas_id);
-          
+     
+
+        
         View::share('opleiding', $opleiding);
         View::share('klas', $klas);
            }
+
+
     });
 }
+
+
 
     /**
      * Register any application services.

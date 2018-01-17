@@ -22,7 +22,7 @@ class UserTableSeeder extends Seeder
             'cohort' => str_random(5),
             'klas_id' => random_int(1, 5),
             'opleiding_id' => random_int(1, 5),
-            'studiepunten' => random_int(1, 10),
+
         ]);
 
         DB::table('users')->insert([
@@ -36,7 +36,7 @@ class UserTableSeeder extends Seeder
             'cohort' => str_random(5),
             'klas_id' => random_int(1, 5),
             'opleiding_id' => random_int(1, 5),
-            'studiepunten' => random_int(1, 10),
+
         ]);
 
         DB::table('users')->insert([
@@ -50,7 +50,7 @@ class UserTableSeeder extends Seeder
             'cohort' => str_random(5),
             'klas_id' => random_int(1, 5),
             'opleiding_id' => random_int(1, 5),
-            'studiepunten' => random_int(1, 10)
+
         ]);
     }
 }
