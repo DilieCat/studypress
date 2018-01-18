@@ -190,3 +190,8 @@ _:-ms-input-placeholder, :root .demo-graph {
   position: absolute;
   right: 20%;
 }
+
+input.form-control{
+  width: 50% !important;
+  margin:0px !important;
+}

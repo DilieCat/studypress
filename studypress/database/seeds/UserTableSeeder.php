@@ -4,6 +4,8 @@ use Illuminate\Database\Seeder;
 
 class UserTableSeeder extends Seeder
 {
+    public $timestamps = false; 
+ 
     /**
      * Run the database seeds.
      *
@@ -22,6 +24,7 @@ class UserTableSeeder extends Seeder
             'cohort' => str_random(5),
             'klas_id' => random_int(1, 5),
             'opleiding_id' => random_int(1, 5),
+            'studiepunten' => random_int(1, 10), 
 
         ]);
 
@@ -36,6 +39,7 @@ class UserTableSeeder extends Seeder
             'cohort' => str_random(5),
             'klas_id' => random_int(1, 5),
             'opleiding_id' => random_int(1, 5),
+            'studiepunten' => random_int(1, 10), 
 
         ]);
 
@@ -50,6 +54,7 @@ class UserTableSeeder extends Seeder
             'cohort' => str_random(5),
             'klas_id' => random_int(1, 5),
             'opleiding_id' => random_int(1, 5),
+            'studiepunten' => random_int(1, 10), 
 
         ]);
     }
