@@ -4,6 +4,10 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
   <style>
+    .failed_red{
+      color: red;
+    }
+
     body {
       display: flex;
       min-height: 100vh;
@@ -53,7 +57,11 @@
               <div class='col s12'>
               </div>
             </div>
-
+              @if ($errors->has('email'))
+            <span class="help-block">
+                <strong><span class='failed_red'>{{ $errors->first('email') }}</span></strong>
+            </span>
+        @endif
             <div class='row'>
               <div class='input-field col s12'>
                 <input class='validate' type='email' name='email' id='email' />
