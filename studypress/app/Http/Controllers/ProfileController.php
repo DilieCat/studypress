@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
+use App\user;
 
 class ProfileController extends Controller
 {
@@ -21,6 +22,16 @@ class ProfileController extends Controller
         $klas = DB::select('select * from klas where id = ' . $klas_id); 
 
         return view('profile', ['klas_id' => $klas_id], ['klas' => $klas]);
+    }
+
+    public function edit(Profile $profile)
+    {
+        User::where('id', $profile->input('userid')
+                            ->update(['email' => $profile->input('mail')])
+                            ->update(['telnummer' => $profile->input('tel')])
+                    );
+        return back();
+
     }
 
     /**
@@ -61,10 +72,7 @@ class ProfileController extends Controller
      * @param  \App\profile  $profile
      * @return \Illuminate\Http\Response
      */
-    public function edit(profile $profile)
-    {
-        //
-    }
+
 
     /**
      * Update the specified resource in storage.
