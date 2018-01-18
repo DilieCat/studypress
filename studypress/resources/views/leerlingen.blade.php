@@ -13,6 +13,7 @@
               <th>OV-nummer</th>
               <th>Cohort</th>
               <th>Telnummer</th>
+              <th></th>
           </tr>
         </thead>
 
@@ -25,7 +26,7 @@
 	<td>{{$user->adres}}</td>
 	<td>{{$user->ov_nummer}}</td>
 	<td>{{$user->cohort}}</td>
-	<td>{{$user->telnumer}}</td>
+	<td>{{$user->telnummer}}</td>
 	<td><a href="/leerlingedit?userid={{$user->id}}"><i class="material-icons" role="presentation">edit</i></a></td>
 </tr>
 @endforeach
