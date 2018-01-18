@@ -101,6 +101,9 @@
         </header>
         <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
           <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Home</a>
+        @if( Auth::user()->userlevel > 0 )
+        <a class="mdl-navigation__link" href="{{ url('/leerlingen') }}"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">edit</i>Leerling beheer</a>
+        @endif
           @if ( Auth::user()->userlevel < 1 )
           <a class="dropdown-button btn" data-beloworigin="true" href="#!" data-activates="dropdown1">Opleiding
             <i class="material-icons right">arrow_drop_down</i>

@@ -25,6 +25,8 @@ Route::group(['middleware' => 'auth'], function () {
 
 	Route::get('/', 'HomeController@index');
 	Route::get('/profile', 'ProfileController@index');
+	Route::get('/leerlingen', 'leerlingBeheerController@index');
+	Route::get('/leerlingedit', 'leerlingBeheerController@edit');
 	Route::get('/block', 'BlockController@index');
 	Route::get('/block1', 'BlockController@getBlock1');
 	Route::get('/block2', 'BlockController@getBlock2');
