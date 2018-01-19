@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
@@ -18,24 +17,21 @@ class AppServiceProvider extends ServiceProvider
      * @return void
      */
     function boot()
-{
-    view()->composer('*', function ($view) 
     {
-        Schema::defaultStringLength(191);
+        view()->composer('*', function ($view)
+        {
+            Schema::defaultStringLength(191);
 
-        //We look in the user table for the opleiding_id in the user table to compare it to the ID in the opleiding table.
-        if(Auth::check()){
-        $opleiding_id = Auth::user()->opleiding_id;
-        $opleiding = DB::select('select * from opleiding where id = ' . $opleiding_id);
-
-        $klas_id = Auth::user()->klas_id;
-        $klas = DB::select('select * from klas where id = ' . $klas_id);
-          
-        View::share('opleiding', $opleiding);
-        View::share('klas', $klas);
-           }
-    });
-}
+            //We look in the user table for the opleiding_id in the user table to compare it to the ID in the opleiding table.
+            if (Auth::check())
+            {
+                $opleiding = DB::table('opleiding')->where('id', Auth::user()->opleiding_id)->first();
+                $klas = DB::table('klas')->where('id', Auth::user()->klas_id)->first();
+                View::share('opleiding', $opleiding);
+                View::share('klas', $klas);
+            }
+        });
+    }
 
     /**
      * Register any application services.
@@ -45,5 +41,7 @@ class AppServiceProvider extends ServiceProvider
     public function register()
     {
         //
+        
     }
 }
+
