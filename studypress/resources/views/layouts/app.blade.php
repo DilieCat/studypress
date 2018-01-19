@@ -104,7 +104,7 @@
         @if( Auth::user()->userlevel > 0 )
         <a class="mdl-navigation__link" href="{{ url('/leerlingen') }}"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">edit</i>Leerling beheer</a>
         @endif
-          @if ( Auth::user()->userlevel < 1 )
+        @if( Auth::user()->userlevel < 1 )
           <a class="dropdown-button btn" data-beloworigin="true" href="#!" data-activates="dropdown1">{{ $opleiding[0]->name }}
             <i class="material-icons right">arrow_drop_down</i>
             </a>
