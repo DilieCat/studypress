@@ -2,11 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use Request;
 use App\profile;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Http\Request;
+//use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
+use App\user; 
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Http\Response;
 
 class ProfileController extends Controller
 {
@@ -22,6 +26,19 @@ class ProfileController extends Controller
 
         return view('profile', ['klas_id' => $klas_id], ['klas' => $klas]);
     }
+
+    public function edit() 
+    { 
+
+        $user = Auth::user();
+    
+        $user->telnummer = Request::input('tel');
+        $user->email = Request::input('mail');
+
+        $user->save();
+
+       return redirect('/profile');
+    } 
 
     /**
      * Show the form for creating a new resource.
@@ -61,10 +78,6 @@ class ProfileController extends Controller
      * @param  \App\profile  $profile
      * @return \Illuminate\Http\Response
      */
-    public function edit(profile $profile)
-    {
-        //
-    }
 
     /**
      * Update the specified resource in storage.
