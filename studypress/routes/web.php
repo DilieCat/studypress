@@ -25,6 +25,10 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::post('/profile/edit', 'ProfileController@edit'); 
 	Route::get('/', 'HomeController@index');
 	Route::get('/profile', 'ProfileController@index');
+	Route::get('/leerlingen', 'leerlingBeheerController@index');
+	Route::get('/leerlingedit', 'leerlingBeheerController@edit');
+	//Update user
+	Route::any('/leerlingupdate/{id}', 'leerlingBeheerController@update')->name('leerlingupdate');
 	Route::get('/block', 'BlockController@index');
 	Route::get('/block1', 'BlockController@getBlock1');
 	Route::get('/block2', 'BlockController@getBlock2');

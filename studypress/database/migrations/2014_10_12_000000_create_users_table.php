@@ -27,11 +27,19 @@ class CreateUsersTable extends Migration
             $table->string('cohort');
             $table->integer('klas_id');
             $table->integer('opleiding_id');
+            $table->integer('userlevel');
+            //user level is
+            //0 = normale user
+            //1 = leraar
+            //2 = admin
     /**
      * Reverse the migrations.
      *
      * @return void
      */
+});
+    }
+
     public function down()
     {
         Schema::dropIfExists('users');
