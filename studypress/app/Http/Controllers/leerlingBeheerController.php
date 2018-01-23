@@ -43,6 +43,10 @@ class leerlingBeheerController extends Controller
         //update post data
         $user = User::find($id)->update($postData);
 
+        $user = User::find($id);
+        $user->name = $request->input('name');
+        $user->save();
+
         return redirect('/leerlingen');
     }
 }
