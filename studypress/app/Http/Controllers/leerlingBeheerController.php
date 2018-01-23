@@ -8,6 +8,13 @@ use Illuminate\Http\Request;
 
 class leerlingBeheerController extends Controller
 {
+    //Met deze functie kunnen alleen de leraren de pagina bezoeken.
+    public function __construct()
+    {
+        $this->middleware('auth');
+        $this->middleware('roles');
+    }
+
     public function index(){
     	//only retrieve the student profiles, the reason for that is so the teachers--
     	//can't edit the teachers.

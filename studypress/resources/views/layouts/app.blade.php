@@ -46,7 +46,7 @@
       margin-bottom: 40px;
       z-index: 900;
     }
- <style>
+
     #view-source {
       position: fixed;
       display: block;
@@ -57,6 +57,42 @@
       z-index: 900;
     }
     </style>
+
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Blok 1</h4>
+      <p>A bunch of text</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Sluiten</a>
+    </div>
+  </div>
+
+   <div id="modal2" class="modal">
+    <div class="modal-content">
+      <h4>Blok 2</h4>
+      <p>A bunch of text</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Sluiten</a>
+    </div>
+  </div>
+          
+
+  <div id="modal3" class="modal">
+    <div class="modal-content">
+      <h4>Blok 3</h4>
+      <p>A bunch of text</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Sluiten</a>
+    </div>
+  </div>
+          
+          
+
   </head>
   <body>
     <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
@@ -98,6 +134,9 @@
               <a href="{{ url('/logout') }}"><li class="mdl-menu__item">Uitloggen</li></a>
             </ul>
           </div>
+
+
+
         </header>
         <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
           <a class="mdl-navigation__link" href="/"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Home</a>
@@ -195,6 +234,12 @@
             stopPropagation: false // Stops event propagation
           }
         );
+
+            $(document).ready(function(){
+    // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+    $('.modal').modal();
+  });
+        
       </script>
   </body>
 </html>
