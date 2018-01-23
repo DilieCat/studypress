@@ -63,7 +63,7 @@
   <div id="modal1" class="modal">
     <div class="modal-content">
       <h4>Blok 1</h4>
-      <p>A bunch of text</p>
+      <p>@yield('blok_1')</p>
     </div>
     <div class="modal-footer">
       <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Sluiten</a>
@@ -73,7 +73,7 @@
    <div id="modal2" class="modal">
     <div class="modal-content">
       <h4>Blok 2</h4>
-      <p>A bunch of text</p>
+      <p>@yield('blok_2')</p>
     </div>
     <div class="modal-footer">
       <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Sluiten</a>
@@ -84,7 +84,7 @@
   <div id="modal3" class="modal">
     <div class="modal-content">
       <h4>Blok 3</h4>
-      <p>A bunch of text</p>
+      <p>@yield('blok_3')</p>
     </div>
     <div class="modal-footer">
       <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Sluiten</a>

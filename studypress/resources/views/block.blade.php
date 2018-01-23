@@ -3,6 +3,15 @@
 @section('title', 'Blok')
 
 @section('content')
+@section('blok_1')
+1
+@endsection 
+@section('blok_2')
+2
+@endsection 
+@section('blok_3')
+3
+@endsection 
 
 
 
