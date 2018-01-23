@@ -22,6 +22,8 @@ Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 Route::group(['middleware' => 'auth'], function () {
 	//This is the place where (almost) every route needs to be place
 	//This protects the application for not logged in users
+	Route::get('/upload', 'LeerlingenController@showForm');
+	Route::post('/upload', 'LeerlingenController@create');
 	Route::post('/profile/edit', 'ProfileController@edit'); 
 	Route::get('/', 'HomeController@index');
 	Route::get('/profile', 'ProfileController@index');
