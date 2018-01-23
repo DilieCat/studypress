@@ -20,7 +20,6 @@
 		<b>Mobiele nummer:</b>
 		<input type="number" class="form-control" id="name" name="tel" value="{{ Auth::user()->telnummer }}" style="display:inline;"><br>
 
-		<input type="hidden" value="{{ Auth::user()->id }}" name="userid"></input>
 		<button class="waves-effect waves-light btn" type="submit">submit</button>
 
 	</form>
