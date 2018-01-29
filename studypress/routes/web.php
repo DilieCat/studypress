@@ -25,6 +25,7 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::get('/upload', 'LeerlingenController@showForm');
 	Route::post('/upload', 'LeerlingenController@create');
 	Route::post('/profile/edit', 'ProfileController@edit'); 
+	Route::any('/test', 'securityTestController@index'); 
 	Route::get('/', 'HomeController@index');
 	Route::get('/profile', 'ProfileController@index');
 	Route::get('/leerlingen', 'leerlingBeheerController@index');

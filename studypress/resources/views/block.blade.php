@@ -3,12 +3,19 @@
 @section('title', 'Blok')
 
 @section('content')
+
+//The sections are made so you can dynamicly change all the semesters.
+
 @section('blok_1')
 1
 @endsection 
+
+
 @section('blok_2')
 2
 @endsection 
+
+
 @section('blok_3')
 3
 @endsection 

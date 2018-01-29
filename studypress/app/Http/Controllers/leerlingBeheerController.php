@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 class leerlingBeheerController extends Controller
 {
-    //Met deze functie kunnen alleen de leraren de pagina bezoeken.
+    //With this function the teachers can only acces this controller/all pages with this
     public function __construct()
     {
         $this->middleware('auth');
