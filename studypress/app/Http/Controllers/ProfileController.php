@@ -2,11 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use Request;
 use App\profile;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Http\Request;
+//use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
+use App\user; 
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Http\Response;
 
 class ProfileController extends Controller
 {
@@ -23,69 +27,16 @@ class ProfileController extends Controller
         return view('profile', ['klas_id' => $klas_id], ['klas' => $klas]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
+    public function edit() 
+    { 
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
+        $user = Auth::user();
+    
+        $user->telnummer = Request::input('tel');
+        $user->email = Request::input('mail');
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\profile  $profile
-     * @return \Illuminate\Http\Response
-     */
-    public function show(profile $profile)
-    {
-        //
-    }
+        $user->save();
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\profile  $profile
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(profile $profile)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\profile  $profile
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, profile $profile)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\profile  $profile
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(profile $profile)
-    {
-        //
-    }
+       return redirect('/profile');
+    } 
 }

@@ -1,3 +1,4 @@
+
 <!doctype html>
 
 <html lang="en">
@@ -45,7 +46,7 @@
       margin-bottom: 40px;
       z-index: 900;
     }
- <style>
+
     #view-source {
       position: fixed;
       display: block;
@@ -56,6 +57,42 @@
       z-index: 900;
     }
     </style>
+
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Blok 1</h4>
+      <p>@yield('blok_1')</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Sluiten</a>
+    </div>
+  </div>
+
+   <div id="modal2" class="modal">
+    <div class="modal-content">
+      <h4>Blok 2</h4>
+      <p>@yield('blok_2')</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Sluiten</a>
+    </div>
+  </div>
+          
+
+  <div id="modal3" class="modal">
+    <div class="modal-content">
+      <h4>Blok 3</h4>
+      <p>@yield('blok_3')</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Sluiten</a>
+    </div>
+  </div>
+          
+          
+
   </head>
   <body>
     <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
@@ -97,9 +134,17 @@
               <a href="{{ url('/logout') }}"><li class="mdl-menu__item">Uitloggen</li></a>
             </ul>
           </div>
+
+
+
         </header>
         <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
-          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Home</a>
+          <a class="mdl-navigation__link" href="/"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Home</a>
+        @if( Auth::user()->userlevel > 0 )
+        <a class="mdl-navigation__link" href="{{ url('/leerlingen') }}"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">edit</i>Leerling beheer</a>
+        <a class="mdl-navigation__link" href="{{ url('/upload') }}"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">cloud_upload</i>Upload a .csv file</a>
+        @endif
+        @if( Auth::user()->userlevel < 1 )
           <a class="dropdown-button btn" data-beloworigin="true" href="#!" data-activates="dropdown1">{{ $opleiding[0]->name }}
             <i class="material-icons right">arrow_drop_down</i>
             </a>
@@ -109,7 +154,7 @@
               <li><a href="{{ url('/block') }}">Blok</a></li>
               <li><a href="#">Studiepunten</a></li>
             </ul>
-         
+         @endif
           <div class="mdl-layout-spacer"></div>
           <a class="mdl-navigation__link" href="{{ url('/logout') }}"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">exit_to_app</i><span class="white-text">Uitloggen</span></a>
         </nav>
@@ -189,6 +234,12 @@
             stopPropagation: false // Stops event propagation
           }
         );
+
+            $(document).ready(function(){
+    // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+    $('.modal').modal();
+  });
+        
       </script>
   </body>
 </html>
